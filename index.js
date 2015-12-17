@@ -1,0 +1,1 @@
+module.exports = self.URL.revokeObjectURL || self.webkitURL.revokeObjectURL || function() {};
