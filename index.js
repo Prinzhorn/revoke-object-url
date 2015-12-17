@@ -1,9 +1,9 @@
 var revokeObjectURL;
 
 if(self.URL) {
-	revokeObjectURL = URL.revokeObjectURL;
+	revokeObjectURL = URL.revokeObjectURL.bind(URL);
 } else if(self.webkitURL) {
-	revokeObjectURL = webkitURL.revokeObjectURL;
+	revokeObjectURL = webkitURL.revokeObjectURL.bind(webkitURL);
 } else {
 	revokeObjectURL = function() {};
 }
